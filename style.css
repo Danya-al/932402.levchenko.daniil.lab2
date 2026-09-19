@@ -26,3 +26,39 @@ header {
   padding-bottom: 16px;
   margin-bottom: 24px;
 }
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  border-radius: 12px;
+}
+
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.project-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #e8c9a0;
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.project-card:hover::before {
+  filter: blur(10px);
+  transform: scale(1.00);
+}
